@@ -2,8 +2,10 @@
 
 * 所有 HTTP 请求响应均为 JSON，UTF-8 编码，需指定 header：
 
-    ```Content-type:application/json
-    Accept:application/json```
+    ```javascript
+    Content-type:application/json
+    Accept:application/json
+    ```
 
 * 请求示例：
 
@@ -14,19 +16,23 @@
 
     失败示例：
     ```javascript
-    {"errcode": 123, "errmsg": "该邮件地址已经被使用，你已经注册？"}```
+    {"errcode": 123, "errmsg": "该邮件地址已经被使用，你已经注册？"}
+    ```
 
     附带数据的示例：
     ```javascript
-    {"errcode": 0, "errmsg": "OK", "data": [{"task1", ...}, {"task2", ...}]}```
+    {"errcode": 0, "errmsg": "OK", "data": [{"task1", ...}, {"task2", ...}]}
+    ```
 
 * 获取用户信息的 API 都需要登陆并且有权限（用户在该组织）访问，否则会返回错误：
 
     ```javascript
-    {"errcode": 3, "errmsg": "you need sign in"}```
+    {"errcode": 3, "errmsg": "you need sign in"}
+    ```
 
     ```javascript
-    {"errcode": 4, "errmsg": "permission denied"}```
+    {"errcode": 4, "errmsg": "permission denied"}
+    ```
 
     后面示例不一一说明
 
@@ -38,7 +44,8 @@
 ### 参数：
 
 ```javascript
-{"phone": "1234", "password": "foobar12345", "name": "your-name", "token": "xxx", "gender": 1}```
+{"phone": "1234", "password": "foobar12345", "name": "your-name", "token": "xxx", "gender": 1}
+```
 
 #### 说明：
 
