@@ -9,15 +9,15 @@
 * 请求示例：
 
     成功示例：
-    ```
-    {'errcode': 0, 'errmsg': 'OK'}
+    ```javascript
+    {"errcode": 0, "errmsg": "OK"}
     ```
 
     失败示例：
-    ```{'errcode': 123, 'errmsg': '该邮件地址已经被使用，你已经注册？'}```
+    ```{"errcode": 123, "errmsg": "该邮件地址已经被使用，你已经注册？"}```
 
     附带数据的示例：
-    ```{'errcode': 0, 'errmsg': 'OK', 'data': [{'task1', ...}, {'task2', ...}]}```
+    ```{"errcode": 0, "errmsg": "OK", "data": [{"task1", ...}, {"task2", ...}]}```
 
 * 获取用户信息的 API 都需要登陆并且有权限（用户在该组织）访问，否则会返回错误：
 
@@ -43,7 +43,9 @@
 * token 是Email/手机号通过验证得到的验证码，获取 token 的方法见：创建 Token。
 
 ### 返回：
-```{
+
+```javascript
+{
   "data": {
     "name": "alice",
     "email": "alice@gmail.com",
